@@ -14,6 +14,16 @@ $MyThemeUpdateChecker = new ThemeUpdateChecker(
 'readit_pro', //Theme slug. Usually the same as the name of its directory.
 'http://modernthemes.net/updates/?action=get_metadata&slug=readit_pro' //Metadata URL.
 );
+// Подключение плагина MultiPostThumbnails
+if (class_exists('MultiPostThumbnails')) {
+ 
+new MultiPostThumbnails(array(
+'label' => 'Выява на галоўнай старонцы',
+'id' => 'secondary-image',
+'post_type' => 'post'
+ ));
+ 
+}
 
 
 /**
