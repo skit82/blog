@@ -7,7 +7,18 @@
 <div class="masonry-post animate-plus" data-animations="fadeIn" data-animation-when-visible="true" data-animation-delay="0.5s">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-thumbnail'); ?></a>
+    	<a href="<?php the_permalink(); ?>"><?php 
+      
+      if (MultiPostThumbnails::get_the_post_thumbnail(get_post_type(), 'secondary-image')==='') 
+      { 
+          the_post_thumbnail('blog-thumbnail');
+      }
+      else
+      { 
+          MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+      } 
+      
+   ?></a>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
