@@ -840,7 +840,7 @@ a:active {
 	z-index: 99999;
 }
 
-.site-footer {
+.site-footer {margin-top: 50px;
     background: none repeat scroll 0 0 #222;
     color: #b9babe;
     padding: 30px;
